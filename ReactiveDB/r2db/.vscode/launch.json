@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "R2dbApplication",
+            "request": "launch",
+            "mainClass": "com.reactivetest.r2db.R2dbApplication",
+            "projectName": "r2db"
+        },
+        {
+            "type": "java",
             "name": "CloudApplication",
             "request": "launch",
             "mainClass": "spring.cloud.CloudApplication",

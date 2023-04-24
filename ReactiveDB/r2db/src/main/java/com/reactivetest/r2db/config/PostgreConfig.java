@@ -4,7 +4,8 @@ package com.reactivetest.r2db.config;
  import javax.persistence.EntityManagerFactory;
  import javax.sql.DataSource;
 
- import org.springframework.context.annotation.Bean;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+import org.springframework.context.annotation.Bean;
  import org.springframework.context.annotation.Configuration;
  import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
  import org.springframework.jdbc.datasource.DriverManagerDataSource;
@@ -19,7 +20,11 @@ package com.reactivetest.r2db.config;
  @Configuration
  @EnableJpaRepositories(basePackages = "com.reactivetest.r2db")
  @EnableTransactionManagement
- class ApplicationConfig {
+ @ConditionalOnProperty(
+        value = "common.db"
+        ,havingValue = "rdb"
+        ,matchIfMissing = false)
+ public class PostgreConfig {
 
    @Bean
    public DataSource dataSource() {
