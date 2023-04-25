@@ -6,6 +6,6 @@ import lombok.Data;
 public class PersonDto {
 
     private String id;
-    private String firstName,lastName;
+    private String firstNm,lastNm;
     
 }

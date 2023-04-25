@@ -1,3 +1,6 @@
+server:
+  port: 8080
+
 spring:
   cloud:
     gateway:
@@ -50,6 +53,8 @@ spring:
       - org.springframework.boot.autoconfigure.data.r2dbc.R2dbcAutoConfiguration
       - org.springframework.boot.autoconfigure.data.r2dbc.R2dbcDataAutoConfiguration
       - org.springframework.boot.autoconfigure.data.mongo.MongoReactiveDataAutoConfiguration
+      - org.springframework.boot.autoconfigure.mongo.MongoReactiveAutoConfiguration
+      - org.springframework.boot.autoconfigure.data.mongo.MongoReactiveRepositoriesAutoConfiguration
       
 
 
@@ -64,4 +69,4 @@ logging:
               ReactiveMongoTemplate: DEBUG
 
 common:
-  db: mongo
+  db: rdb

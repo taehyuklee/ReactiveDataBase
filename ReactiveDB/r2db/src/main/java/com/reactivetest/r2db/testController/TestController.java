@@ -15,6 +15,7 @@ import com.reactivetest.r2db.testService.TestService;
 
 import lombok.RequiredArgsConstructor;
 import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
 @RestController
 @RequiredArgsConstructor
@@ -25,8 +26,8 @@ public class TestController {
 
     //Insert
     @PostMapping("/insert")
-    public Flux<Void> insertTest(@RequestBody PersonDto person){
-        return testService.insertTest(person);
+    public Mono<Void> insertTest(@RequestBody PersonDto person){
+        return testService.insertTest(person).then();
     }
 
     //Read
