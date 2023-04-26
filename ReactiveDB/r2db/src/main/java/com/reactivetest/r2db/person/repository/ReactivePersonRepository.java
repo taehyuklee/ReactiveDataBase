@@ -12,5 +12,4 @@ import reactor.core.publisher.Flux;
 
 public interface ReactivePersonRepository extends ReactiveSortingRepository<Person, String>{
     Flux<Person> findByLastNm(String lastNm);
-
 }

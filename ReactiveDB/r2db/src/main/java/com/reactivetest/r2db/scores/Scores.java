@@ -1,4 +1,4 @@
-package com.reactivetest.r2db.scoresDomain;
+package com.reactivetest.r2db.scores;
 
 import lombok.Data;
 

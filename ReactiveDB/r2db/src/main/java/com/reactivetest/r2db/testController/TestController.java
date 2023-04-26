@@ -30,6 +30,11 @@ public class TestController {
         return testService.insertTest(person).then();
     }
 
+    @PostMapping("/insertScore")
+    public Mono<Void> insertScore(){
+        return testService.insertScore().then();
+    }
+
     //Read
     @GetMapping("/read")
     public Flux<Person> readTest(@RequestParam String lastNm){

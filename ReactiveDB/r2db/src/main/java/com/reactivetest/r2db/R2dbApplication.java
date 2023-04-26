@@ -10,7 +10,7 @@ import reactor.blockhound.BlockHound;
 public class R2dbApplication {
 
 	public static void main(String[] args) {
-		BlockHound.install();
+		//BlockHound.install();
 		SpringApplication.run(R2dbApplication.class, args);
 	}
 
