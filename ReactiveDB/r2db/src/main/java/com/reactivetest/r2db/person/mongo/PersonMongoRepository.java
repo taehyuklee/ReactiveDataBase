@@ -1,3 +1,4 @@
+package com.reactivetest.r2db.person.mongo;
 // package com.reactivetest.r2db.personDomain.mongo;
 
 // import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;

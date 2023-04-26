@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.reactivetest.r2db.personDomain.Person;
-import com.reactivetest.r2db.personDomain.PersonDto;
+import com.reactivetest.r2db.person.Person;
+import com.reactivetest.r2db.person.PersonDto;
 import com.reactivetest.r2db.testService.TestService;
 
 import lombok.RequiredArgsConstructor;

@@ -3,9 +3,10 @@ package com.reactivetest.r2db.testService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
-import com.reactivetest.r2db.personDomain.Person;
-import com.reactivetest.r2db.personDomain.PersonDto;
-import com.reactivetest.r2db.personDomain.PersonRepository;
+import com.reactivetest.r2db.person.Person;
+import com.reactivetest.r2db.person.PersonDto;
+import com.reactivetest.r2db.person.PersonRepository;
+import com.reactivetest.r2db.person.repository.ReactivePersonRepository;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -17,7 +18,7 @@ import reactor.core.publisher.Mono;
 @RequiredArgsConstructor
 public class TestService {
 
-    private final PersonRepository personRepository;
+    private final ReactivePersonRepository personRepository;
 
     public Mono<String> insertTest(PersonDto person){
 

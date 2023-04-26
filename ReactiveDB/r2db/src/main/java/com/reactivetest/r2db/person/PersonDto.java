@@ -1,4 +1,4 @@
-package com.reactivetest.r2db.personDomain;
+package com.reactivetest.r2db.person;
 
 import lombok.Data;
 

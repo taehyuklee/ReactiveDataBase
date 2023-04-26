@@ -1,13 +1,12 @@
-package com.reactivetest.r2db.personDomain;
+package com.reactivetest.r2db.person;
 
 import org.springframework.data.repository.reactive.ReactiveSortingRepository;
 import org.springframework.stereotype.Repository;
 
 import reactor.core.publisher.Flux;
 
-
-public interface PersonRepository extends ReactiveSortingRepository<Person, String>{
-    Flux<Person> findAll();
+@Repository
+public interface PersonRepository{
 
     Flux<Person> findByLastNm(String lastNm);
 }
