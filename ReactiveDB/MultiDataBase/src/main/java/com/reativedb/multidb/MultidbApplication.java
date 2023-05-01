@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MultiDataBaseApplication {
+public class MultidbApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MultiDataBaseApplication.class, args);
+		SpringApplication.run(MultidbApplication.class, args);
 	}
 
 }
