@@ -4,7 +4,7 @@ for reactive MongoDB & PostgreSQL <br>
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/89365465/235420080-2c2c84f5-a510-460d-b289-25966557daec.png" width="49%" height="49%">
-<img src="https://https://user-images.githubusercontent.com/89365465/235451014-3e5e5e27-c8d1-4154-8cb3-3a46614f7499.jpg" width="49%" height="49%">
+<img src="https://user-images.githubusercontent.com/89365465/235451071-9abed2c5-076d-4324-b5b7-17267bea6532.jpg" width="49%" height="49%">
 <figcaption align="center">No Control-shear flow & Controlled Shear flow</figcaption>
 </p>
 
