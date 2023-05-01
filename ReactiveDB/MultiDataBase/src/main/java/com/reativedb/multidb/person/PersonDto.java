@@ -1,4 +1,4 @@
-package com.reativeDB.MultiDataBase.person;
+package com.reativedb.multidb.person;
 
 import lombok.Data;
 

@@ -1,4 +1,4 @@
-package com.reativeDB.MultiDataBase.config;
+package com.reativedb.multidb.config;
 
 
 import java.util.ArrayList;

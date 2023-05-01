@@ -1,4 +1,4 @@
-package com.reativeDB.MultiDataBase.scores;
+package com.reativedb.multidb.scores;
 
 import lombok.Data;
 

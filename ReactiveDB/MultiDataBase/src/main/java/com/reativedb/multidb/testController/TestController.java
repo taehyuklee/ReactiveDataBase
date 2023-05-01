@@ -1,4 +1,4 @@
-package com.reativeDB.MultiDataBase.testController;
+package com.reativedb.multidb.testController;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.reativeDB.MultiDataBase.person.Person;
-import com.reativeDB.MultiDataBase.person.PersonDto;
-import com.reativeDB.MultiDataBase.testController.testService.TestService;
+import com.reativedb.multidb.person.Person;
+import com.reativedb.multidb.person.PersonDto;
+import com.reativedb.multidb.testController.testService.TestService;
 
 import lombok.RequiredArgsConstructor;
 import reactor.core.publisher.Flux;

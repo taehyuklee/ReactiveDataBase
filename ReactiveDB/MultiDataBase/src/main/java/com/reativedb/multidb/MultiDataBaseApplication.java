@@ -1,4 +1,4 @@
-package com.reativeDB.MultiDataBase;
+package com.reativedb.multidb;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

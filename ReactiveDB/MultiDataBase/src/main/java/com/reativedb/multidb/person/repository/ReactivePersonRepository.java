@@ -1,8 +1,8 @@
-package com.reativeDB.MultiDataBase.person.repository;
+package com.reativedb.multidb.person.repository;
 
 import org.springframework.data.repository.reactive.ReactiveSortingRepository;
 
-import com.reativeDB.MultiDataBase.person.Person;
+import com.reativedb.multidb.person.Person;
 
 import reactor.core.publisher.Flux;
 
