@@ -6,16 +6,6 @@ for reactive MongoDB & PostgreSQL <br>
 # Reactive Mongo Template
 
 ```java
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.data.mongodb.config.AbstractReactiveMongoConfiguration;
-import org.springframework.data.mongodb.core.ReactiveMongoTemplate;
-import org.springframework.data.mongodb.repository.config.EnableReactiveMongoRepositories;
-
-import com.mongodb.reactivestreams.client.MongoClient;
-import com.mongodb.reactivestreams.client.MongoClients;
-
 @Configuration
 @ConditionalOnProperty(
         value = "common.db"
@@ -41,3 +31,30 @@ public class RxMongoConfig extends AbstractReactiveMongoConfiguration {
 }
 
 ```
+<br><br>
+
+# Reactive RDB (eg. PostgreSQL)
+
+```java
+@Configuration
+@ConditionalOnProperty(
+        value = "common.db"
+        ,havingValue = "rdb"
+        ,matchIfMissing = false)
+@EnableR2dbcRepositories(basePackages = "com.reativedb.multidb.person.repository")
+public class R2dbcTemplate {
+    
+    @Bean
+    public R2dbcEntityTemplate r2dbcEntityTemplate(ConnectionFactory databaseClient) {
+        return new R2dbcEntityTemplate(databaseClient);
+    }
+
+    @Bean
+    public DatabaseClient databaseClient(ConnectionFactory connectionFactory) {
+        return DatabaseClient.builder().connectionFactory(connectionFactory).build();
+    }
+
+
+}
+```
+<br>
