@@ -18,7 +18,7 @@ import com.mongodb.reactivestreams.client.MongoClients;
         value = "common.db"
         ,havingValue = "mongo"
         ,matchIfMissing = false)
-@EnableReactiveMongoRepositories(basePackages = "com.reactivetest.r2db.person.repository")
+@EnableReactiveMongoRepositories(basePackages = "com.reativeDB.MultiDataBase.person.repository")
 public class RxMongoConfig extends AbstractReactiveMongoConfiguration {
 
     @Override
