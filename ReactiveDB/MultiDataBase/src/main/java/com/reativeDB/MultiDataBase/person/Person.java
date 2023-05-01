@@ -1,4 +1,4 @@
-package com.reactivetest.r2db.person;
+package com.reativeDB.MultiDataBase.person;
 
 import javax.persistence.Entity;
 

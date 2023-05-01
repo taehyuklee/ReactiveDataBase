@@ -1,4 +1,4 @@
-package com.reactivetest.r2db.scores;
+package com.reativeDB.MultiDataBase.scores;
 
 import lombok.Data;
 

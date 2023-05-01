@@ -1,4 +1,4 @@
-package com.reactivetest.r2db.testService;
+package com.reativeDB.MultiDataBase.testController.testService;
 
 import java.util.UUID;
 
@@ -7,12 +7,11 @@ import javax.transaction.Transactional;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
-import com.reactivetest.r2db.person.Person;
-import com.reactivetest.r2db.person.PersonDto;
-import com.reactivetest.r2db.person.PersonRepository;
-import com.reactivetest.r2db.person.repository.ReactivePersonRepository;
-import com.reactivetest.r2db.scores.ScoreRepository;
-import com.reactivetest.r2db.scores.Scores;
+import com.reativeDB.MultiDataBase.person.Person;
+import com.reativeDB.MultiDataBase.person.PersonDto;
+import com.reativeDB.MultiDataBase.person.repository.ReactivePersonRepository;
+import com.reativeDB.MultiDataBase.scores.ScoreRepository;
+import com.reativeDB.MultiDataBase.scores.Scores;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

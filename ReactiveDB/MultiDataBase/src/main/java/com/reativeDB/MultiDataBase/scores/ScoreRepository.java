@@ -1,4 +1,4 @@
-package com.reactivetest.r2db.scores;
+package com.reativeDB.MultiDataBase.scores;
 
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.data.jpa.repository.JpaRepository;

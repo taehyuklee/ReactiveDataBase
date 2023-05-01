@@ -1,6 +1,5 @@
-package com.reactivetest.r2db.person;
+package com.reativeDB.MultiDataBase.person;
 
-import org.springframework.data.repository.reactive.ReactiveSortingRepository;
 import org.springframework.stereotype.Repository;
 
 import reactor.core.publisher.Flux;

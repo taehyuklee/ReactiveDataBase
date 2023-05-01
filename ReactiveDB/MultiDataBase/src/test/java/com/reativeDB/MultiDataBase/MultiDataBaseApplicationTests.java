@@ -1,10 +1,10 @@
-package com.reactivetest.r2db;
+package com.reativeDB.MultiDataBase;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class R2dbApplicationTests {
+class MultiDataBaseApplicationTests {
 
 	@Test
 	void contextLoads() {
