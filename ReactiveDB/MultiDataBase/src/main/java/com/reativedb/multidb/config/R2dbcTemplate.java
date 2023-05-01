@@ -15,7 +15,7 @@ import io.r2dbc.spi.ConnectionFactory;
         value = "common.db"
         ,havingValue = "rdb"
         ,matchIfMissing = false)
-@EnableR2dbcRepositories(basePackages = "com.reativeDB.MultiDataBase.person.repository")
+@EnableR2dbcRepositories(basePackages = "com.reativedb.multidb.person.repository")
 public class R2dbcTemplate {
     
     @Bean
