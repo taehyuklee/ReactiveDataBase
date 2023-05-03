@@ -85,7 +85,7 @@ spring:
   data:
     mongodb:
       uri: mongodb://localhost:27017/
-      database: APIGW
+      database: TestDB
 
   autoconfigure:
     exclude:
