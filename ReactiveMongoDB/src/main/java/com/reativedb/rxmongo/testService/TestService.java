@@ -26,11 +26,6 @@ public class TestService {
         BeanUtils.copyProperties(person, personEntity);
         Mono<Person> result = personRepository.save(personEntity);
 
-        // //일반 JPA
-        // Scores scores = new Scores();
-        // scores.setScore((int) Math.random()*100);
-        // scoreRepository.save(scores);
-
         log.info("Insertion");
 
         return result.map(p -> {
