@@ -1,0 +1,25 @@
+server:
+  port: 8080
+
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: dbScan
+        uri: http://localhost:8084
+        predicates:
+        - Path=/r2db
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/MONGO      
+
+
+logging:
+  level:
+    root: INFO
+    org:
+      springframework:
+        data:
+          mongodb:
+            core:
+              ReactiveMongoTemplate: DEBUG

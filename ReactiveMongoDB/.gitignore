@@ -23,8 +23,8 @@ bin/
 *.iml
 *.ipr
 *.bat
-*.jpg
 *.png
+*.jpg
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
