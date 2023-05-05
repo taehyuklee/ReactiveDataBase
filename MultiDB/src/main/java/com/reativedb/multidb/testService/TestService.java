@@ -1,4 +1,4 @@
-package com.reativedb.multidb.testController.testService;
+package com.reativedb.multidb.testService;
 
 import java.util.UUID;
 
