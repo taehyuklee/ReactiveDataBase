@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.reativedb.multidb.person.Person;
 import com.reativedb.multidb.person.PersonDto;
-import com.reativedb.multidb.testController.testService.TestService;
+import com.reativedb.multidb.testService.TestService;
 
 import lombok.RequiredArgsConstructor;
 import reactor.core.publisher.Flux;
