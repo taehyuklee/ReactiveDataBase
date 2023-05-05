@@ -39,7 +39,7 @@ public class RxMongoConfig extends AbstractReactiveMongoConfiguration {
 ```
 <br><br>
 
-# Reactive RDB (eg. PostgreSQL)
+# Reactive RDB (eg. PostgreSQL) - [DatabaseClient or ConnectionFactory]
 
 ```java
 @Configuration
@@ -63,6 +63,43 @@ public class R2dbcTemplate {
 
 }
 ```
+#### Or 
+
+```java
+@Configuration
+public class R2dbcTemplate extends AbstractR2dbcConfiguration{
+
+    @Value("spring.r2dbc.url")
+    private String url;
+
+    @Override 
+    public ConnectionFactory connectionFactory() {
+        ConnectionFactory connectionFactory = ConnectionFactories.get(url);
+        return connectionFactory;
+    }
+    
+    @Bean
+    public R2dbcEntityTemplate r2dbcEntityTemplate(ConnectionFactory databaseClient) {
+        return new R2dbcEntityTemplate(databaseClient);
+    }
+
+    @Bean
+    public R2dbcMappingContext r2dbcMappingContext(DatabaseClient databaseClient) {
+        R2dbcMappingContext mappingContext = new R2dbcMappingContext();
+        return mappingContext;
+    }
+
+    @Bean
+    public PersistentEntitiesFactoryBean persistentEntitiesFactoryBean(R2dbcMappingContext mappingContext) {
+        PersistentEntitiesFactoryBean factoryBean = new PersistentEntitiesFactoryBean(mappingContext);
+        return factoryBean;
+    }
+
+}
+
+```
+
+
 <br>
 
 ### Configuration for multi-database is as like below. you need to disable some autoconfig function
@@ -80,6 +117,8 @@ spring:
   r2dbc:
     url: r2dbc:postgresql://localhost:5432/postgres
     username: postgres
+    // if you use ConnectionFactory, You should write user name and password at once. like below
+    // url: r2dbc:postgresql://[user_name]:[password]@localhost:5432/postgres
 
  
   data:
