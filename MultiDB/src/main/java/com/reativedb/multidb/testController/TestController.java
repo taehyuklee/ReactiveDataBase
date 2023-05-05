@@ -14,7 +14,6 @@ import com.reativedb.multidb.person.PersonDto;
 import com.reativedb.multidb.testService.TestService;
 
 import lombok.RequiredArgsConstructor;
-import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @RestController
@@ -29,29 +28,5 @@ public class TestController {
     public Mono<Void> insertTest(@RequestBody PersonDto person){
         return testService.insertTest(person).then();
     }
-
-    @PostMapping("/insertScore")
-    public Mono<Void> insertScore(){
-        return testService.insertScore().then();
-    }
-
-    //Read
-    @GetMapping("/read")
-    public Flux<Person> readTest(@RequestParam String lastNm){
-        return testService.readTest(lastNm);
-    }
-
-    //Update
-    @PutMapping("/update")
-    public void updateTest(@RequestBody PersonDto person){
-        testService.updateTest(person);
-    }
-
-    //Delete
-    @DeleteMapping("/delete")
-    public void deleteTest(){
-        testService.deleteTest();
-    }
-
     
 }

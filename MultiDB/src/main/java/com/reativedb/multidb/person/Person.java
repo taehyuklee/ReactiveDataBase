@@ -1,8 +1,5 @@
 package com.reativedb.multidb.person;
 
-import javax.persistence.Entity;
-
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.data.annotation.Id;
 
 import lombok.Data;

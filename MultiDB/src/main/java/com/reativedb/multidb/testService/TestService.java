@@ -10,8 +10,6 @@ import org.springframework.stereotype.Service;
 import com.reativedb.multidb.person.Person;
 import com.reativedb.multidb.person.PersonDto;
 import com.reativedb.multidb.person.repository.ReactivePersonRepository;
-import com.reativedb.multidb.scores.ScoreRepository;
-import com.reativedb.multidb.scores.Scores;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -24,7 +22,6 @@ import reactor.core.publisher.Mono;
 public class TestService {
 
     private final ReactivePersonRepository personRepository;
-    private final ScoreRepository scoreRepository;
 
     // @Transactional
     public Mono<String> insertTest(PersonDto person){
@@ -33,10 +30,6 @@ public class TestService {
         BeanUtils.copyProperties(person, personEntity);
         Mono<Person> result = personRepository.save(personEntity);
 
-        // //일반 JPA
-        // Scores scores = new Scores();
-        // scores.setScore((int) Math.random()*100);
-        // scoreRepository.save(scores);
 
         log.info("Insertion");
 
@@ -47,45 +40,17 @@ public class TestService {
         });
     }
 
-    // @Transactional
-    public Mono<String> insertScore(){
-
-        Mono<String> result = Mono.just("").doOnNext((i)-> {
-
-            //일반 JPA
-            Scores scores = new Scores();
-            scores.setScore((int) Math.random()*100);
-            String uuId =UUID.randomUUID().toString();
-            scores.setId(uuId);
-            scoreRepository.save(scores);
-
-        });
-
-
-        return result;
-    }
-
-
     public Flux<Person> readTest(String lastNm){
 
 
         // BeanUtils.copyProperties(person, personEntity);
         Flux<Person> result = personRepository.findByLastNm(lastNm);
 
-        log.info("Insertion");
+        log.info("read");
 
         return result;
         
     }
 
-    public void updateTest(PersonDto person){
-        
-
-
-    }
-
-    public void deleteTest(){
-        
-    }
     
 }
