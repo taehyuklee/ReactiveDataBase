@@ -117,6 +117,8 @@ spring:
   r2dbc:
     url: r2dbc:postgresql://localhost:5432/postgres
     username: postgres
+    // if you use ConnectionFactory, You should write user name and password at once. like below
+    // url: r2dbc:postgresql://[user_name]:[password]@localhost:5432/postgres
 
  
   data:
